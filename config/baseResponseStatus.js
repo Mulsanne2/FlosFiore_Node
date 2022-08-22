@@ -30,9 +30,11 @@ module.exports = {
     SIGNUP_REDUNDANT_NICKNAME : { "isSuccess": false, "code": 3002, "message":"중복된 닉네임입니다." },
 
     SIGNIN_EMAIL_WRONG : { "isSuccess": false, "code": 3003, "message": "아이디가 잘못 되었습니다." },
-    SIGNIN_PASSWORD_WRONG : { "isSuccess": false, "code": 3004, "message": "비밀번호를 영문자와 숫자를 포함하여 생성하세요." },
+    SIGNIN_PASSWORD_WRONG : { "isSuccess": false, "code": 3004, "message": "비밀번호를 틀렸습니다." },
     SIGNIN_INACTIVE_ACCOUNT : { "isSuccess": false, "code": 3005, "message": "비활성화 된 계정입니다. 고객센터에 문의해주세요." },
     SIGNIN_WITHDRAWAL_ACCOUNT : { "isSuccess": false, "code": 3006, "message": "탈퇴 된 계정입니다. 고객센터에 문의해주세요." },
+
+    LOGNIN_PASSWORD_WRONG : { "isSuccess": false, "code": 3004, "message": "비밀번호를 영문자와 숫자를 포함하여 생성하세요." },
 
     NO_FLOWER_SHOP : {"isSuccess": false, "code": 4001, "message": "해당 꽃을 판매하는 가게가 없습니다."},
 

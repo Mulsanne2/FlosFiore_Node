@@ -27,7 +27,7 @@ exports.postSignIn = async function (email, pwd) {
 
     if (passwordRows[0].pwd != hashedPassword) {
       //조회한 pwd와 암호화한 pwd가 같은지 확인하는 과정
-      return errResponse(baseResponse.SIGNIN_PASSWORD_WRONG);
+      return errResponse(baseResponse.LOGNIN_PASSWORD_WRONG);
     }
 
     //user 계정의 status 확인하기 -> 계정이 휴면상태이거나 삭제되었을 경우 로그인할 수 없기 때문
