@@ -39,3 +39,12 @@ exports.CheckEmailDuplicate = async function (email) {
 
   return EDuplicateResult[0].t;
 }
+
+exports.GetUserName = async function(email) {
+  const connection = await pool.getConnection(async (conn) => conn);
+
+  const userName = await userDao.GetName(connection, email);
+  connection.release();
+
+  return userName;
+}

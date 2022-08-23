@@ -46,8 +46,9 @@ exports.postSignIn = async function (email, pwd) {
         subject: "User",
       }
     );
+    const userName = await userProvider.GetUserName(email);
 
-    return response(baseResponse.SUCCESS);
+    return response(baseResponse.SUCCESS,userName);
   } catch (err) {
     console.log(`App - authService Service error\n: ${err.message}`);
 

@@ -65,6 +65,18 @@ async function checkEmailDuplicate(connection, email) {
   return EmailDuplicateRow;
 }
 
+async function GetName(connection, email) {
+  const SelectName = `
+    SELECT name
+    FROM User 
+    WHERE email = ?;
+  `;
+
+  const [userName] = await connection.query(SelectName, email);
+
+  return userName;
+}
+
 
 module.exports = {
   selectUserEmail,
@@ -72,4 +84,5 @@ module.exports = {
   selectUserAccount,
   insertUserSignUp,
   checkEmailDuplicate,
+  GetName,
 };
